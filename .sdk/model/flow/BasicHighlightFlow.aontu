@@ -1,0 +1,22 @@
+# BasicHighlightFlow
+
+main: kit: flow: BasicHighlightFlow:
+{
+  entity: "highlight",
+  kind: "basic",
+  name: "BasicHighlightFlow",
+  step: [
+    {
+      op: "list",
+      valid: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "highlight_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicHighlightFlow"
+}

@@ -1,0 +1,26 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      auth: false
+      contact: {
+        name: "API Documentation"
+        url: "https://github.com/l0v3m0n3y/svoboda"
+      }
+      description: "This API provides access to various features of svoboda.org, enabling users to interact with content and services related to uncensored news and responsible discourse. It supports functionalities such as fetching live highlights and other project-related data."
+      servers: [
+        {
+          description: "Production server"
+          url: "https://www.svoboda.org"
+        }
+      ]
+      summary: "This API provides access to various features of svoboda.org, enabling users to interact with content and services related to uncensored news and responsible discourse."
+      title: "Svoboda Web API"
+      version: "1.0.0"
+      website: "https://github.com/l0v3m0n3y/svoboda"
+    }
+  }
+}
+

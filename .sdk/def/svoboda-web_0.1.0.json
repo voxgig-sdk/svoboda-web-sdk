@@ -1,0 +1,112 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Svoboda Web API",
+    "description": "This API provides access to various features of svoboda.org, enabling users to interact with content and services related to uncensored news and responsible discourse. It supports functionalities such as fetching live highlights and other project-related data.",
+    "version": "1.0.0",
+    "contact": {
+      "name": "API Documentation",
+      "url": "https://github.com/l0v3m0n3y/svoboda"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://www.svoboda.org",
+      "description": "Production server"
+    }
+  ],
+  "paths": {
+    "/hljson": {
+      "get": {
+        "summary": "Get live highlights",
+        "description": "Fetches live highlights from svoboda.org, providing current news and updates without censorship.",
+        "operationId": "getLiveHighlights",
+        "tags": [
+          "Highlights"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response with live highlights data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "highlights": {
+                      "type": "array",
+                      "description": "Array of live highlight items",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string",
+                            "description": "Unique identifier for the highlight"
+                          },
+                          "title": {
+                            "type": "string",
+                            "description": "Title of the highlight"
+                          },
+                          "content": {
+                            "type": "string",
+                            "description": "Content or description of the highlight"
+                          },
+                          "timestamp": {
+                            "type": "string",
+                            "format": "date-time",
+                            "description": "Timestamp when the highlight was created or updated"
+                          },
+                          "url": {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "URL to the full article or content"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "highlights": [
+                    {
+                      "id": "12345",
+                      "title": "Breaking News Update",
+                      "content": "Latest developments in uncensored news coverage",
+                      "timestamp": "2024-01-15T12:30:00Z",
+                      "url": "https://www.svoboda.org/article/12345"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "description": "Error message"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Highlights",
+      "description": "Operations related to live highlights and news updates"
+    }
+  ],
+  "externalDocs": {
+    "description": "Find more information and source code on GitHub",
+    "url": "https://github.com/l0v3m0n3y/svoboda"
+  }
+}

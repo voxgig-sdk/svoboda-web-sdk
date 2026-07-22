@@ -1,0 +1,37 @@
+{
+  "existing": {
+    "highlight": {
+      "HIGHLIGHT00": {
+        "content": "s32",
+        "id": "HIGHLIGHT00",
+        "timestamp": "s34",
+        "title": "s35",
+        "url": "s36"
+      },
+      "HIGHLIGHT01": {
+        "content": "s64",
+        "id": "HIGHLIGHT01",
+        "timestamp": "s66",
+        "title": "s67",
+        "url": "s68"
+      },
+      "HIGHLIGHT02": {
+        "content": "s96",
+        "id": "HIGHLIGHT02",
+        "timestamp": "s98",
+        "title": "s99",
+        "url": "s9a"
+      }
+    }
+  },
+  "new": {
+    "highlight": {
+      "highlight_ref01": {
+        "content": "sc8",
+        "timestamp": "sca",
+        "title": "scb",
+        "url": "scc"
+      }
+    }
+  }
+}
