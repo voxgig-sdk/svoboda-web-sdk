@@ -75,6 +75,7 @@ class SvobodaWebConfig
                 [
                   'active' => true,
                   'args' => [],
+                  'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/hljson',
                   'parts' => [
@@ -83,7 +84,7 @@ class SvobodaWebConfig
                   'select' => [],
                   'transform' => [
                     'req' => '`reqdata`',
-                    'res' => '`body`',
+                    'res' => '`body.highlights`',
                   ],
                   'index$' => 0,
                 ],

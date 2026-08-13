@@ -61,11 +61,11 @@ function highlight_direct_setup(mockres)
   local calls = {}
 
   local env = runner.env_override({
-    ["SVOBODAWEB_TEST_HIGHLIGHT_ENTID"] = {},
-    ["SVOBODAWEB_TEST_LIVE"] = "FALSE",
+    ["SVOBODA_WEB_TEST_HIGHLIGHT_ENTID"] = {},
+    ["SVOBODA_WEB_TEST_LIVE"] = "FALSE",
   })
 
-  local live = env["SVOBODAWEB_TEST_LIVE"] == "TRUE"
+  local live = env["SVOBODA_WEB_TEST_LIVE"] == "TRUE"
 
   if live then
     local merged_opts = {

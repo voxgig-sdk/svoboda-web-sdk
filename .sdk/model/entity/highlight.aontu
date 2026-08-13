@@ -50,7 +50,7 @@ main: kit: entity: highlight: {
           ]
           transform: {
             req: "`reqdata`"
-            res: "`body`"
+            res: "`body.highlights`"
           }
         }
       ]

@@ -70,6 +70,7 @@ module SvobodaWebConfig
                 {
                   "active" => true,
                   "args" => {},
+                  "kind" => "http",
                   "method" => "GET",
                   "orig" => "/hljson",
                   "parts" => [
@@ -78,7 +79,7 @@ module SvobodaWebConfig
                   "select" => {},
                   "transform" => {
                     "req" => "`reqdata`",
-                    "res" => "`body`",
+                    "res" => "`body.highlights`",
                   },
                   "index$" => 0,
                 },

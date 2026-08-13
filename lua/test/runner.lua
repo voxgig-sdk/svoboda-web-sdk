@@ -35,8 +35,8 @@ end
 
 
 function runner.env_override(m)
-  local live = runner.getenv("SVOBODAWEB_TEST_LIVE")
-  local override = runner.getenv("SVOBODAWEB_TEST_OVERRIDE")
+  local live = runner.getenv("SVOBODA_WEB_TEST_LIVE")
+  local override = runner.getenv("SVOBODA_WEB_TEST_OVERRIDE")
 
   if live == "TRUE" or override == "TRUE" then
     for key, _ in pairs(m) do
@@ -56,9 +56,9 @@ function runner.env_override(m)
     end
   end
 
-  local explain = runner.getenv("SVOBODAWEB_TEST_EXPLAIN")
+  local explain = runner.getenv("SVOBODA_WEB_TEST_EXPLAIN")
   if explain ~= nil and explain ~= "" then
-    m["SVOBODAWEB_TEST_EXPLAIN"] = explain
+    m["SVOBODA_WEB_TEST_EXPLAIN"] = explain
   end
 
   return m

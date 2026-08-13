@@ -38,9 +38,18 @@ network, and no credentials:
 ### TypeScript
 
 ```ts
-const client = SvobodaWebSDK.test()
+// The offline mock starts EMPTY — seed it with the records the test needs.
+// Shape: { entity: { <entity-name>: { <id>: <record> } } }
+const client = SvobodaWebSDK.test({
+  entity: {
+    highlight: {
+      test01: { id: 'test01' },
+    },
+  },
+})
 const highlights = await client.Highlight().list()
-// highlights is an array of bare Highlight records populated with mock data
+// highlights is an array of Highlight entities, populated with mock data
+// — call highlights[0].data() for the record itself
 console.log(highlights)
 ```
 
@@ -110,7 +119,7 @@ import { SvobodaWebSDK } from '@voxgig-sdk/svoboda-web'
 
 const client = new SvobodaWebSDK()
 
-// List all highlights (returns Highlight[])
+// List all highlights (returns HighlightEntity[] — .data() for the record)
 const highlights = await client.Highlight().list()
 for (const highlight of highlights) {
   console.log(highlight)
@@ -343,6 +352,9 @@ Pass custom features via the `extend` option at construction time.
 
 This SDK is generated from the upstream OpenAPI specification. It is an
 unofficial client and is not affiliated with the API provider.
+
+The OpenAPI spec(s) this SDK was generated from are kept in the
+[`.sdk/def/`](.sdk/def/) folder.
 
 - Upstream API: [https://github.com/l0v3m0n3y/svoboda](https://github.com/l0v3m0n3y/svoboda)
 

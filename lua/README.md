@@ -218,9 +218,9 @@ data **directly** — there is no wrapper:
 
 Check `err` first (it is non-`nil` on failure), then use `value`:
 
-    local highlight, err = client:Highlight():load()
+    local highlight, err = client:Highlight():list()
     if err then error(err) end
-    -- highlight is the loaded record
+    -- highlight is the record list
 
 Only `direct()` returns a response envelope — a `table` with `ok`,
 `status`, `headers`, and `data` keys.

@@ -43,8 +43,8 @@ class SvobodaWebTestRunner
 
     public static function env_override(array $m): array
     {
-        $live = self::getenv('SVOBODAWEB_TEST_LIVE');
-        $override = self::getenv('SVOBODAWEB_TEST_OVERRIDE');
+        $live = self::getenv('SVOBODA_WEB_TEST_LIVE');
+        $override = self::getenv('SVOBODA_WEB_TEST_OVERRIDE');
 
         if ($live === 'TRUE' || $override === 'TRUE') {
             foreach (array_keys($m) as $key) {
@@ -63,9 +63,9 @@ class SvobodaWebTestRunner
             }
         }
 
-        $explain = self::getenv('SVOBODAWEB_TEST_EXPLAIN');
+        $explain = self::getenv('SVOBODA_WEB_TEST_EXPLAIN');
         if ($explain !== null && $explain !== '') {
-            $m['SVOBODAWEB_TEST_EXPLAIN'] = $explain;
+            $m['SVOBODA_WEB_TEST_EXPLAIN'] = $explain;
         }
 
         return $m;

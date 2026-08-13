@@ -23,8 +23,8 @@ module SvobodaWebTestRunner
   end
 
   def self.env_override(m)
-    live = getenv("SVOBODAWEB_TEST_LIVE")
-    override = getenv("SVOBODAWEB_TEST_OVERRIDE")
+    live = getenv("SVOBODA_WEB_TEST_LIVE")
+    override = getenv("SVOBODA_WEB_TEST_OVERRIDE")
 
     if live == "TRUE" || override == "TRUE"
       m.each_key do |key|
@@ -44,8 +44,8 @@ module SvobodaWebTestRunner
       end
     end
 
-    explain = getenv("SVOBODAWEB_TEST_EXPLAIN")
-    m["SVOBODAWEB_TEST_EXPLAIN"] = explain if explain && !explain.empty?
+    explain = getenv("SVOBODA_WEB_TEST_EXPLAIN")
+    m["SVOBODA_WEB_TEST_EXPLAIN"] = explain if explain && !explain.empty?
 
     m
   end

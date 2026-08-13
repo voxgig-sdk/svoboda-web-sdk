@@ -66,11 +66,11 @@ function highlight_direct_setup($mockres)
     $calls = new \ArrayObject();
 
     $env = Runner::env_override([
-        "SVOBODAWEB_TEST_HIGHLIGHT_ENTID" => [],
-        "SVOBODAWEB_TEST_LIVE" => "FALSE",
+        "SVOBODA_WEB_TEST_HIGHLIGHT_ENTID" => [],
+        "SVOBODA_WEB_TEST_LIVE" => "FALSE",
     ]);
 
-    $live = $env["SVOBODAWEB_TEST_LIVE"] === "TRUE";
+    $live = $env["SVOBODA_WEB_TEST_LIVE"] === "TRUE";
 
     if ($live) {
         $merged_opts = [

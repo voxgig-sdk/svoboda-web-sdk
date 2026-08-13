@@ -37,7 +37,7 @@ class HighlightEntity extends SvobodaWebEntityBase<Highlight> {
 
 
 
-  async list(this: any, reqmatch?: HighlightListMatch, ctrl?: Control): Promise<Highlight[]> {
+  async list(this: any, reqmatch?: HighlightListMatch, ctrl?: Control): Promise<HighlightEntity[]> {
 
     const utility = this._utility
 

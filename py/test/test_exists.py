@@ -1,4 +1,4 @@
-# ProjectName SDK exists test
+# SvobodaWeb SDK exists test
 
 import pytest
 from svobodaweb_sdk import SvobodaWebSDK

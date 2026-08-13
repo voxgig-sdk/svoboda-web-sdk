@@ -23,6 +23,7 @@ require_once __DIR__ . '/MakeUrl.php';
 require_once __DIR__ . '/Param.php';
 require_once __DIR__ . '/PrepareAuth.php';
 require_once __DIR__ . '/PrepareBody.php';
+require_once __DIR__ . '/Graphql.php';
 require_once __DIR__ . '/PrepareHeaders.php';
 require_once __DIR__ . '/PrepareMethod.php';
 require_once __DIR__ . '/PrepareParams.php';
@@ -59,6 +60,8 @@ SvobodaWebUtility::setRegistrar(function (SvobodaWebUtility $u): void {
     $u->prepare_params = [SvobodaWebPrepareParams::class, 'call'];
     $u->prepare_path = [SvobodaWebPreparePath::class, 'call'];
     $u->prepare_query = [SvobodaWebPrepareQuery::class, 'call'];
+    $u->graphql_body = [SvobodaWebGraphql::class, 'body'];
+    $u->graphql_errors = [SvobodaWebGraphql::class, 'errors'];
     $u->result_basic = [SvobodaWebResultBasic::class, 'call'];
     $u->result_body = [SvobodaWebResultBody::class, 'call'];
     $u->result_headers = [SvobodaWebResultHeaders::class, 'call'];

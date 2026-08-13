@@ -16,11 +16,11 @@
 import pytest
 
 from projectname_sdk import SvobodaWebSDK
-from core.error import SvobodaWebError
-from core.result import SvobodaWebResult
-from core.response import SvobodaWebResponse
-from core.spec import SvobodaWebSpec
-from feature.base_feature import SvobodaWebBaseFeature
+from projectname_sdk.core.error import SvobodaWebError
+from projectname_sdk.core.result import SvobodaWebResult
+from projectname_sdk.core.response import SvobodaWebResponse
+from projectname_sdk.core.spec import SvobodaWebSpec
+from projectname_sdk.feature.base_feature import SvobodaWebBaseFeature
 
 
 def _client():

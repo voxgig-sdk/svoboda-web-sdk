@@ -26,8 +26,8 @@ import {
 describe('HighlightEntity', async () => {
 
   // Per-test live pacing. Delay is read from sdk-test-control.json's
-  // `test.live.delayMs`; only sleeps when SVOBODAWEB_TEST_LIVE=TRUE.
-  afterEach(liveDelay('SVOBODAWEB_TEST_LIVE'))
+  // `test.live.delayMs`; only sleeps when SVOBODA_WEB_TEST_LIVE=TRUE.
+  afterEach(liveDelay('SVOBODA_WEB_TEST_LIVE'))
 
   test('instance', async () => {
     const testsdk = SvobodaWebSDK.test()
@@ -63,7 +63,7 @@ describe('HighlightEntity', async () => {
     const highlight_ref01_ent = client.Highlight()
     const highlight_ref01_match: any = {}
 
-    const highlight_ref01_list = await highlight_ref01_ent.list(highlight_ref01_match)
+    const highlight_ref01_list = (await highlight_ref01_ent.list(highlight_ref01_match)).map((e: any) => e.data())
 
 
   })

@@ -14,12 +14,12 @@ from __future__ import annotations
 
 from urllib.parse import quote
 
-from config import make_config
-from features import _make_feature
-from core.control import SvobodaWebControl
-from core.error import SvobodaWebError
-from core.result import SvobodaWebResult
-from core.spec import SvobodaWebSpec
+from projectname_sdk.config import make_config
+from projectname_sdk.features import _make_feature
+from projectname_sdk.core.control import SvobodaWebControl
+from projectname_sdk.core.error import SvobodaWebError
+from projectname_sdk.core.result import SvobodaWebResult
+from projectname_sdk.core.spec import SvobodaWebSpec
 
 
 # True when this SDK was generated with the named feature.

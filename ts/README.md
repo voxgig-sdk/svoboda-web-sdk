@@ -35,7 +35,9 @@ const client = new SvobodaWebSDK()
 
 ### 2. List highlight records
 
-`list()` resolves to an array of Highlight objects — iterate it directly:
+`list()` resolves to an array of Highlight ENTITIES — every operation
+resolves to entities, not raw records. Iterate them directly, and call
+`.data()` on one for the record it holds:
 
 ```ts
 const highlights = await client.Highlight().list()
@@ -120,7 +122,8 @@ Create a mock client for unit testing — no server required:
 const client = SvobodaWebSDK.test()
 
 const highlight = await client.Highlight().list()
-// highlight is a bare entity populated with mock response data
+// highlight is the entity, populated with mock response data
+// — call highlight.data() for the record itself
 console.log(highlight)
 ```
 

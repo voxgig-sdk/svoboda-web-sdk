@@ -24,6 +24,7 @@ require_relative 'prepare_method'
 require_relative 'prepare_params'
 require_relative 'prepare_path'
 require_relative 'prepare_query'
+require_relative 'graphql'
 require_relative 'result_basic'
 require_relative 'result_body'
 require_relative 'result_headers'
@@ -55,6 +56,8 @@ SvobodaWebUtility.registrar = ->(u) {
   u.prepare_params = SvobodaWebUtilities::PrepareParams
   u.prepare_path = SvobodaWebUtilities::PreparePath
   u.prepare_query = SvobodaWebUtilities::PrepareQuery
+  u.graphql_body = SvobodaWebUtilities::GraphqlBody
+  u.graphql_errors = SvobodaWebUtilities::GraphqlErrors
   u.result_basic = SvobodaWebUtilities::ResultBasic
   u.result_body = SvobodaWebUtilities::ResultBody
   u.result_headers = SvobodaWebUtilities::ResultHeaders

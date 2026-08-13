@@ -8,6 +8,7 @@ guide: {
   entity: highlight: {
     path: "/hljson": {
       op: list: method: *GET
+      op: list: transform: res: *("`body.highlights`")|top
     }
   }
 

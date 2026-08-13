@@ -3,9 +3,9 @@
 import json
 import pytest
 
-from utility.voxgig_struct import voxgig_struct as vs
+from svobodaweb_sdk.utility.voxgig_struct import voxgig_struct as vs
 from svobodaweb_sdk import SvobodaWebSDK
-from core import helpers
+from svobodaweb_sdk.core import helpers
 from test import runner
 
 
@@ -58,11 +58,11 @@ def _highlight_direct_setup(mockres):
     calls = []
 
     env = runner.env_override({
-        "SVOBODAWEB_TEST_HIGHLIGHT_ENTID": {},
-        "SVOBODAWEB_TEST_LIVE": "FALSE",
+        "SVOBODA_WEB_TEST_HIGHLIGHT_ENTID": {},
+        "SVOBODA_WEB_TEST_LIVE": "FALSE",
     })
 
-    live = env.get("SVOBODAWEB_TEST_LIVE") == "TRUE"
+    live = env.get("SVOBODA_WEB_TEST_LIVE") == "TRUE"
 
     if live:
         merged_opts = {
