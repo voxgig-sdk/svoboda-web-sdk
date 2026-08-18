@@ -15,7 +15,7 @@ require_relative "../SvobodaWeb_sdk"
 module SvobodaWebFeatureHarness
   # True when this SDK was generated with the named feature.
   def self.has_feature?(name)
-    f = SvobodaWebConfig.make_config["feature"]
+    f = SvobodaWebConfig.shared_config["feature"]
     f.is_a?(Hash) && !f[name].nil?
   end
 

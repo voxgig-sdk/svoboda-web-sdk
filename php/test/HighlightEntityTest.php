@@ -40,7 +40,7 @@ class HighlightEntityTest extends TestCase
         $this->assertCount(3, $seen);
 
         // Inbound: streaming active -> yields each item from the feature.
-        $cfg = SvobodaWebConfig::make_config();
+        $cfg = SvobodaWebConfig::shared_config();
         if (isset($cfg["feature"]) && is_array($cfg["feature"]) && isset($cfg["feature"]["streaming"])) {
             $sdk = SvobodaWebSDK::test($seed, ["feature" => ["streaming" => ["active" => true]]]);
             $got = [];

@@ -40,7 +40,7 @@ class SvobodaWebSDK
         $utility = new SvobodaWebUtility();
         $this->_utility = $utility;
 
-        $config = SvobodaWebConfig::make_config();
+        $config = SvobodaWebConfig::shared_config();
 
         $this->_rootctx = ($utility->make_context)([
             "client" => $this,

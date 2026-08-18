@@ -14,7 +14,7 @@ from __future__ import annotations
 
 from urllib.parse import quote
 
-from svobodaweb_sdk.config import make_config
+from svobodaweb_sdk.config import shared_config
 from svobodaweb_sdk.features import _make_feature
 from svobodaweb_sdk.core.control import SvobodaWebControl
 from svobodaweb_sdk.core.error import SvobodaWebError
@@ -24,7 +24,7 @@ from svobodaweb_sdk.core.spec import SvobodaWebSpec
 
 # True when this SDK was generated with the named feature.
 def has_feature(name):
-    feature = make_config().get("feature")
+    feature = shared_config().get("feature")
     return isinstance(feature, dict) and feature.get(name) is not None
 
 

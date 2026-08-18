@@ -28,7 +28,7 @@ class SvobodaWebSDK
     utility = SvobodaWebUtility.new
     @_utility = utility
 
-    config = SvobodaWebConfig.make_config
+    config = SvobodaWebConfig.shared_config
 
     @_rootctx = utility.make_context.call({
       "client" => self,
