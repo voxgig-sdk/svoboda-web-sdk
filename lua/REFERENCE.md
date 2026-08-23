@@ -90,11 +90,11 @@ local highlight = client:Highlight(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `content` | `string` | No |  |
-| `id` | `string` | No |  |
-| `timestamp` | `string` | No |  |
-| `title` | `string` | No |  |
-| `url` | `string` | No |  |
+| `content` | `string` | No | Content or description of the highlight |
+| `id` | `string` | No | Unique identifier for the highlight |
+| `timestamp` | `string` | No | Timestamp when the highlight was created or updated |
+| `title` | `string` | No | Title of the highlight |
+| `url` | `string` | No | URL to the full article or content |
 
 ### Operations
 

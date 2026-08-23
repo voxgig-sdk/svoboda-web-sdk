@@ -6,7 +6,7 @@ The Golang SDK for the SvobodaWeb API — an entity-oriented client using standa
 
 It exposes the API as capitalised, semantic **Entities** — e.g. `client.Highlight(nil)` — each with the same small set of operations (`List`) instead of raw URL paths and query strings. You call meaning, not endpoints, which keeps the cognitive load low.
 
-> Other languages, the CLI, and MCP server live alongside this one — see
+> Also generated from this model: `go-cli`, `go-mcp`, `lua`, `php`, `py`, `rb`, `ts` — see
 > the [top-level README](../README.md).
 
 
@@ -260,11 +260,11 @@ Only `Direct()` returns a response envelope — a `map[string]any` with
 
 | Field | Description |
 | --- | --- |
-| `"content"` |  |
-| `"id"` |  |
-| `"timestamp"` |  |
-| `"title"` |  |
-| `"url"` |  |
+| `"content"` | Content or description of the highlight |
+| `"id"` | Unique identifier for the highlight |
+| `"timestamp"` | Timestamp when the highlight was created or updated |
+| `"title"` | Title of the highlight |
+| `"url"` | URL to the full article or content |
 
 Operations: List.
 
@@ -289,11 +289,11 @@ Create an instance: `highlight := client.Highlight(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `content` | `string` |  |
-| `id` | `string` |  |
-| `timestamp` | `string` |  |
-| `title` | `string` |  |
-| `url` | `string` |  |
+| `content` | `string` | Content or description of the highlight |
+| `id` | `string` | Unique identifier for the highlight |
+| `timestamp` | `string` | Timestamp when the highlight was created or updated |
+| `title` | `string` | Title of the highlight |
+| `url` | `string` | URL to the full article or content |
 
 #### Example: List
 

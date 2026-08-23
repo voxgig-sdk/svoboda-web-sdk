@@ -33,6 +33,9 @@ class SvobodaWebConfig
         return [
             "main" => [
                 "name" => "SvobodaWeb",
+                "slug" => "svoboda-web",
+                "version" => "0.0.1",
+                "target" => "php",
             ],
             "feature" => [
                 "test" => [
@@ -55,22 +58,27 @@ class SvobodaWebConfig
           'fields' => [
             [
               'name' => 'content',
+              'short' => 'Content or description of the highlight',
               'type' => '`$STRING`',
             ],
             [
               'name' => 'id',
+              'short' => 'Unique identifier for the highlight',
               'type' => '`$STRING`',
             ],
             [
               'name' => 'timestamp',
+              'short' => 'Timestamp when the highlight was created or updated',
               'type' => '`$STRING`',
             ],
             [
               'name' => 'title',
+              'short' => 'Title of the highlight',
               'type' => '`$STRING`',
             ],
             [
               'name' => 'url',
+              'short' => 'URL to the full article or content',
               'type' => '`$STRING`',
             ],
           ],

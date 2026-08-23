@@ -231,11 +231,11 @@ Only `direct()` returns a response envelope — a `table` with `ok`,
 
 | Field | Description |
 | --- | --- |
-| `content` |  |
-| `id` |  |
-| `timestamp` |  |
-| `title` |  |
-| `url` |  |
+| `content` | Content or description of the highlight |
+| `id` | Unique identifier for the highlight |
+| `timestamp` | Timestamp when the highlight was created or updated |
+| `title` | Title of the highlight |
+| `url` | URL to the full article or content |
 
 Operations: List.
 
@@ -260,11 +260,11 @@ Create an instance: `local highlight = client:Highlight(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `content` | `string` |  |
-| `id` | `string` |  |
-| `timestamp` | `string` |  |
-| `title` | `string` |  |
-| `url` | `string` |  |
+| `content` | `string` | Content or description of the highlight |
+| `id` | `string` | Unique identifier for the highlight |
+| `timestamp` | `string` | Timestamp when the highlight was created or updated |
+| `title` | `string` | Title of the highlight |
+| `url` | `string` | URL to the full article or content |
 
 #### Example: List
 

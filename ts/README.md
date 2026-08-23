@@ -9,7 +9,7 @@ The API is exposed as capitalised, semantic **Entities** — e.g.
 instead of raw URL paths and query parameters. This keeps the surface
 predictable and low-friction for both humans and AI agents.
 
-> Other languages, the CLI, and MCP server live alongside this one — see
+> Also generated from this model: `go`, `go-cli`, `go-mcp`, `lua`, `php`, `py`, `rb` — see
 > the [top-level README](../README.md).
 
 
@@ -287,11 +287,11 @@ The `prepare()` method returns:
 
 | Field | Description |
 | --- | --- |
-| `content` |  |
-| `id` |  |
-| `timestamp` |  |
-| `title` |  |
-| `url` |  |
+| `content` | Content or description of the highlight |
+| `id` | Unique identifier for the highlight |
+| `timestamp` | Timestamp when the highlight was created or updated |
+| `title` | Title of the highlight |
+| `url` | URL to the full article or content |
 
 Operations: list.
 
@@ -316,11 +316,11 @@ Create an instance: `const highlight = client.Highlight()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `content` | `string` |  |
-| `id` | `string` |  |
-| `timestamp` | `string` |  |
-| `title` | `string` |  |
-| `url` | `string` |  |
+| `content` | `string` | Content or description of the highlight |
+| `id` | `string` | Unique identifier for the highlight |
+| `timestamp` | `string` | Timestamp when the highlight was created or updated |
+| `title` | `string` | Title of the highlight |
+| `url` | `string` | URL to the full article or content |
 
 #### Example: List
 

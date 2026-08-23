@@ -87,11 +87,11 @@ highlight = client.Highlight()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `content` | `str` | No |  |
-| `id` | `str` | No |  |
-| `timestamp` | `str` | No |  |
-| `title` | `str` | No |  |
-| `url` | `str` | No |  |
+| `content` | `str` | No | Content or description of the highlight |
+| `id` | `str` | No | Unique identifier for the highlight |
+| `timestamp` | `str` | No | Timestamp when the highlight was created or updated |
+| `title` | `str` | No | Title of the highlight |
+| `url` | `str` | No | URL to the full article or content |
 
 ### Operations
 

@@ -243,11 +243,11 @@ On error, `ok` is `False` and `err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `content` |  |
-| `id` |  |
-| `timestamp` |  |
-| `title` |  |
-| `url` |  |
+| `content` | Content or description of the highlight |
+| `id` | Unique identifier for the highlight |
+| `timestamp` | Timestamp when the highlight was created or updated |
+| `title` | Title of the highlight |
+| `url` | URL to the full article or content |
 
 Operations: List.
 
@@ -272,11 +272,11 @@ Create an instance: `highlight = client.Highlight()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `content` | `str` |  |
-| `id` | `str` |  |
-| `timestamp` | `str` |  |
-| `title` | `str` |  |
-| `url` | `str` |  |
+| `content` | `str` | Content or description of the highlight |
+| `id` | `str` | Unique identifier for the highlight |
+| `timestamp` | `str` | Timestamp when the highlight was created or updated |
+| `title` | `str` | Title of the highlight |
+| `url` | `str` | URL to the full article or content |
 
 #### Example: List
 

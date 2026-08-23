@@ -237,11 +237,11 @@ returns a result `Hash` with these keys:
 
 | Field | Description |
 | --- | --- |
-| `content` |  |
-| `id` |  |
-| `timestamp` |  |
-| `title` |  |
-| `url` |  |
+| `content` | Content or description of the highlight |
+| `id` | Unique identifier for the highlight |
+| `timestamp` | Timestamp when the highlight was created or updated |
+| `title` | Title of the highlight |
+| `url` | URL to the full article or content |
 
 Operations: List.
 
@@ -266,11 +266,11 @@ Create an instance: `highlight = client.Highlight`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `content` | `String` |  |
-| `id` | `String` |  |
-| `timestamp` | `String` |  |
-| `title` | `String` |  |
-| `url` | `String` |  |
+| `content` | `String` | Content or description of the highlight |
+| `id` | `String` | Unique identifier for the highlight |
+| `timestamp` | `String` | Timestamp when the highlight was created or updated |
+| `title` | `String` | Title of the highlight |
+| `url` | `String` | URL to the full article or content |
 
 #### Example: List
 

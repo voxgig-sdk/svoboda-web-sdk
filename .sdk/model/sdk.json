@@ -36,30 +36,35 @@
               "active": true,
               "name": "content",
               "req": false,
+              "short": "Content or description of the highlight",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "id",
               "req": false,
+              "short": "Unique identifier for the highlight",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "timestamp",
               "req": false,
+              "short": "Timestamp when the highlight was created or updated",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "title",
               "req": false,
+              "short": "Title of the highlight",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "url",
               "req": false,
+              "short": "URL to the full article or content",
               "type": "`$STRING`"
             }
           ],

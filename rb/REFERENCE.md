@@ -93,11 +93,11 @@ highlight = client.Highlight
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `content` | `String` | No |  |
-| `id` | `String` | No |  |
-| `timestamp` | `String` | No |  |
-| `title` | `String` | No |  |
-| `url` | `String` | No |  |
+| `content` | `String` | No | Content or description of the highlight |
+| `id` | `String` | No | Unique identifier for the highlight |
+| `timestamp` | `String` | No | Timestamp when the highlight was created or updated |
+| `title` | `String` | No | Title of the highlight |
+| `url` | `String` | No | URL to the full article or content |
 
 ### Operations
 
