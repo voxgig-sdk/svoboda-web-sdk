@@ -42,6 +42,7 @@ class SvobodaWebConfig
           'options' => [
             'active' => false,
           ],
+          'transport' => 'base',
         ],
             ],
             "options" => [
