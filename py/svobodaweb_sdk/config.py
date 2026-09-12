@@ -1,6 +1,14 @@
 # SvobodaWeb SDK configuration
 
 
+# The sekreto plugin DEFINITIONS the model selected per feature, imported
+# above by name from the modules the catalogue's active `plugin.def`
+# entries declare. Handed to each feature (secrets builds its Sekreto
+# with them): a provider kind not listed here is unknown to that SDK.
+FEATURE_PLUGINS = {
+}
+
+
 _shared_config = None
 
 
@@ -63,6 +71,7 @@ def make_config():
             "type": "`$STRING`",
           },
           {
+            "format": "date-time",
             "name": "timestamp",
             "short": "Timestamp when the highlight was created or updated",
             "type": "`$STRING`",
@@ -73,11 +82,16 @@ def make_config():
             "type": "`$STRING`",
           },
           {
+            "format": "uri",
             "name": "url",
             "short": "URL to the full article or content",
             "type": "`$STRING`",
           },
         ],
+        "id": {
+          "field": "id",
+          "name": "id",
+        },
         "name": "highlight",
         "op": {
           "list": {
@@ -89,14 +103,19 @@ def make_config():
                 "kind": "http",
                 "method": "GET",
                 "orig": "/hljson",
-                "parts": [
-                  "hljson",
+                "segments": [
+                  {
+                    "lit": "hljson",
+                  },
                 ],
                 "select": {},
                 "transform": {
                   "req": "`reqdata`",
                   "res": "`body.highlights`",
                 },
+                "parts": [
+                  "hljson",
+                ],
               },
             ],
           },

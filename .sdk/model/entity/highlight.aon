@@ -18,6 +18,7 @@ main: kit: entity: highlight: {
       type: "`$STRING`"
     }
     {
+      format: "date-time"
       name: "timestamp"
       req: false
       short: "Timestamp when the highlight was created or updated"
@@ -30,6 +31,7 @@ main: kit: entity: highlight: {
       type: "`$STRING`"
     }
     {
+      format: "uri"
       name: "url"
       req: false
       short: "URL to the full article or content"
@@ -50,8 +52,10 @@ main: kit: entity: highlight: {
         {
           method: "GET"
           orig: "/hljson"
-          parts: [
-            "hljson"
+          segments: [
+            {
+              lit: "hljson"
+            }
           ]
           transform: {
             req: "`reqdata`"

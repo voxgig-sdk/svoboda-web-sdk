@@ -68,6 +68,7 @@ class SvobodaWebConfig
               'type' => '`$STRING`',
             ],
             [
+              'format' => 'date-time',
               'name' => 'timestamp',
               'short' => 'Timestamp when the highlight was created or updated',
               'type' => '`$STRING`',
@@ -78,10 +79,15 @@ class SvobodaWebConfig
               'type' => '`$STRING`',
             ],
             [
+              'format' => 'uri',
               'name' => 'url',
               'short' => 'URL to the full article or content',
               'type' => '`$STRING`',
             ],
+          ],
+          'id' => [
+            'field' => 'id',
+            'name' => 'id',
           ],
           'name' => 'highlight',
           'op' => [
@@ -94,13 +100,18 @@ class SvobodaWebConfig
                   'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/hljson',
-                  'parts' => [
-                    'hljson',
+                  'segments' => [
+                    [
+                      'lit' => 'hljson',
+                    ],
                   ],
                   'select' => [],
                   'transform' => [
                     'req' => '`reqdata`',
                     'res' => '`body.highlights`',
+                  ],
+                  'parts' => [
+                    'hljson',
                   ],
                 ],
               ],
