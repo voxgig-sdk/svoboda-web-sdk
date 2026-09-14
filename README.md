@@ -105,7 +105,7 @@ local results, err = client:Highlight():list()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/svoboda-web` | publish pending — [install from git tag](https://github.com/voxgig-sdk/svoboda-web-sdk/releases) |
+| TypeScript | `@voxgig-sdk/svoboda-web-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/svoboda-web-sdk/releases) |
 | Python | `voxgig-sdk-svoboda-web` | publish pending — [install from git tag](https://github.com/voxgig-sdk/svoboda-web-sdk/releases) |
 | PHP | `voxgig-sdk/svoboda-web` | publish pending — [install from git tag](https://github.com/voxgig-sdk/svoboda-web-sdk/releases) |
 | Golang | `github.com/voxgig-sdk/svoboda-web-sdk/go` | `go get github.com/voxgig-sdk/svoboda-web-sdk/go@latest` |
@@ -119,7 +119,7 @@ local results, err = client:Highlight():list()
 ### TypeScript
 
 ```ts
-import { SvobodaWebSDK } from '@voxgig-sdk/svoboda-web'
+import { SvobodaWebSDK } from '@voxgig-sdk/svoboda-web-sdk'
 
 const client = new SvobodaWebSDK()
 

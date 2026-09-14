@@ -28,7 +28,7 @@ loading a specific record.
 ### 1. Create a client
 
 ```ts
-import { SvobodaWebSDK } from '@voxgig-sdk/svoboda-web'
+import { SvobodaWebSDK } from '@voxgig-sdk/svoboda-web-sdk'
 
 const client = new SvobodaWebSDK()
 ```
@@ -411,7 +411,7 @@ svoboda-web/
 Import the SDK from the package root:
 
 ```ts
-import { SvobodaWebSDK } from '@voxgig-sdk/svoboda-web'
+import { SvobodaWebSDK } from '@voxgig-sdk/svoboda-web-sdk'
 ```
 
 ### Entity state
