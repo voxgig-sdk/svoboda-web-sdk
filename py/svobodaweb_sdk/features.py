@@ -1,12 +1,18 @@
 # SvobodaWeb SDK feature factory
 
 from svobodaweb_sdk.feature.base_feature import SvobodaWebBaseFeature
+from svobodaweb_sdk.feature.ratelimit_feature import SvobodaWebRatelimitFeature
+from svobodaweb_sdk.feature.retry_feature import SvobodaWebRetryFeature
 from svobodaweb_sdk.feature.test_feature import SvobodaWebTestFeature
+from svobodaweb_sdk.feature.timeout_feature import SvobodaWebTimeoutFeature
 
 
 _FEATURES = {
     "base": lambda: SvobodaWebBaseFeature(),
+    "ratelimit": lambda: SvobodaWebRatelimitFeature(),
+    "retry": lambda: SvobodaWebRetryFeature(),
     "test": lambda: SvobodaWebTestFeature(),
+    "timeout": lambda: SvobodaWebTimeoutFeature(),
 }
 
 

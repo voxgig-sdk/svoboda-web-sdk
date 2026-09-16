@@ -33,5 +33,88 @@
         "url": "scc"
       }
     }
+  },
+  "requests": {
+    "GET /hljson": {
+      "provenance": "operation-contract",
+      "contract": {
+        "operationId": "getLiveHighlights",
+        "parameters": [],
+        "protocol": "http",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "highlights": [
+                    {
+                      "content": "Latest developments in uncensored news coverage",
+                      "id": "12345",
+                      "timestamp": "2024-01-15T12:30:00Z",
+                      "title": "Breaking News Update",
+                      "url": "https://www.svoboda.org/article/12345"
+                    }
+                  ]
+                },
+                "schema": {
+                  "properties": {
+                    "highlights": {
+                      "description": "Array of live highlight items",
+                      "items": {
+                        "properties": {
+                          "content": {
+                            "description": "Content or description of the highlight",
+                            "type": "string"
+                          },
+                          "id": {
+                            "description": "Unique identifier for the highlight",
+                            "type": "string"
+                          },
+                          "timestamp": {
+                            "description": "Timestamp when the highlight was created or updated",
+                            "format": "date-time",
+                            "type": "string"
+                          },
+                          "title": {
+                            "description": "Title of the highlight",
+                            "type": "string"
+                          },
+                          "url": {
+                            "description": "URL to the full article or content",
+                            "format": "uri",
+                            "type": "string"
+                          }
+                        },
+                        "type": "object"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Successful response with live highlights data"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "error": {
+                      "description": "Error message",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Internal server error"
+          }
+        },
+        "securitySource": "unspecified"
+      }
+    }
   }
 }
