@@ -105,12 +105,12 @@ local results, err = client:Highlight():list()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/svoboda-web-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/svoboda-web-sdk/releases) |
-| Python | `voxgig-sdk-svoboda-web` | publish pending — [install from git tag](https://github.com/voxgig-sdk/svoboda-web-sdk/releases) |
-| PHP | `voxgig-sdk/svoboda-web` | publish pending — [install from git tag](https://github.com/voxgig-sdk/svoboda-web-sdk/releases) |
+| TypeScript | `@voxgig-sdk/svoboda-web-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/svoboda-web-sdk/tags) |
+| Python | `voxgig-sdk-svoboda-web` | publish pending — [install from git tag](https://github.com/voxgig-sdk/svoboda-web-sdk/tags) |
+| PHP | `voxgig-sdk/svoboda-web` | publish pending — [install from git tag](https://github.com/voxgig-sdk/svoboda-web-sdk/tags) |
 | Golang | `github.com/voxgig-sdk/svoboda-web-sdk/go` | `go get github.com/voxgig-sdk/svoboda-web-sdk/go@latest` |
-| Ruby | `voxgig-sdk-svoboda-web` | publish pending — [install from git tag](https://github.com/voxgig-sdk/svoboda-web-sdk/releases) |
-| Lua | `voxgig-sdk-svoboda-web` | publish pending — [install from git tag](https://github.com/voxgig-sdk/svoboda-web-sdk/releases) |
+| Ruby | `voxgig-sdk-svoboda-web` | publish pending — [install from git tag](https://github.com/voxgig-sdk/svoboda-web-sdk/tags) |
+| Lua | `voxgig-sdk-svoboda-web` | publish pending — [install from git tag](https://github.com/voxgig-sdk/svoboda-web-sdk/tags) |
 | Go CLI | `github.com/voxgig-sdk/svoboda-web-sdk/go-cli` | `go install github.com/voxgig-sdk/svoboda-web-sdk/go-cli/cmd/svoboda-web@latest` |
 | Go MCP server | `github.com/voxgig-sdk/svoboda-web-sdk/go-mcp` | `go get github.com/voxgig-sdk/svoboda-web-sdk/go-mcp@latest` |
 
