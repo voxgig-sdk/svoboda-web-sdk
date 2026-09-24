@@ -1,0 +1,81 @@
+# Entity: highlight
+
+main: kit: entity: highlight: {
+
+  alias: field: {}
+
+  fields: {
+    content: {
+      h: "Content"
+      n: "content"
+      r: false
+      sh: "Content or description of the highlight"
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      sh: "Unique identifier for the highlight"
+      t: "`$STRING`"
+    }
+    timestamp: {
+      fo: "date-time"
+      h: "Timestamp"
+      n: "timestamp"
+      r: false
+      sh: "Timestamp when the highlight was created or updated"
+      t: "`$STRING`"
+    }
+    title: {
+      h: "Title"
+      n: "title"
+      r: false
+      sh: "Title of the highlight"
+      t: "`$STRING`"
+    }
+    url: {
+      fo: "uri"
+      h: "Url"
+      n: "url"
+      r: false
+      sh: "URL to the full article or content"
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "highlight"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /hljson"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/hljson"
+          s: [
+            {
+              lit: "hljson"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.highlights`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

@@ -113,30 +113,35 @@ class SvobodaWebConfig
           'fields' => [
             [
               'name' => 'content',
-              'short' => 'Content or description of the highlight',
+              'title' => 'Content',
               'type' => '`$STRING`',
+              'short' => 'Content or description of the highlight',
             ],
             [
               'name' => 'id',
-              'short' => 'Unique identifier for the highlight',
+              'title' => 'Id',
               'type' => '`$STRING`',
+              'short' => 'Unique identifier for the highlight',
             ],
             [
-              'format' => 'date-time',
               'name' => 'timestamp',
-              'short' => 'Timestamp when the highlight was created or updated',
+              'title' => 'Timestamp',
               'type' => '`$STRING`',
+              'short' => 'Timestamp when the highlight was created or updated',
+              'format' => 'date-time',
             ],
             [
               'name' => 'title',
-              'short' => 'Title of the highlight',
+              'title' => 'Title',
               'type' => '`$STRING`',
+              'short' => 'Title of the highlight',
             ],
             [
-              'format' => 'uri',
               'name' => 'url',
-              'short' => 'URL to the full article or content',
+              'title' => 'Url',
               'type' => '`$STRING`',
+              'short' => 'URL to the full article or content',
+              'format' => 'uri',
             ],
           ],
           'id' => [
@@ -150,7 +155,6 @@ class SvobodaWebConfig
               'name' => 'list',
               'points' => [
                 [
-                  'args' => [],
                   'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/hljson',
@@ -159,14 +163,16 @@ class SvobodaWebConfig
                       'lit' => 'hljson',
                     ],
                   ],
-                  'select' => [],
+                  'parts' => [
+                    'hljson',
+                  ],
+                  'rename' => [],
                   'transform' => [
                     'req' => '`reqdata`',
                     'res' => '`body.highlights`',
                   ],
-                  'parts' => [
-                    'hljson',
-                  ],
+                  'args' => [],
+                  'select' => [],
                 ],
               ],
             ],

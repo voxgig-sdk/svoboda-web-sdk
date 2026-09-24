@@ -91,30 +91,35 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "content",
-						"short": "Content or description of the highlight",
+						"title": "Content",
 						"type": "`$STRING`",
+						"short": "Content or description of the highlight",
 					},
 					map[string]any{
 						"name": "id",
-						"short": "Unique identifier for the highlight",
+						"title": "Id",
 						"type": "`$STRING`",
+						"short": "Unique identifier for the highlight",
 					},
 					map[string]any{
-						"format": "date-time",
 						"name": "timestamp",
-						"short": "Timestamp when the highlight was created or updated",
+						"title": "Timestamp",
 						"type": "`$STRING`",
+						"short": "Timestamp when the highlight was created or updated",
+						"format": "date-time",
 					},
 					map[string]any{
 						"name": "title",
-						"short": "Title of the highlight",
+						"title": "Title",
 						"type": "`$STRING`",
+						"short": "Title of the highlight",
 					},
 					map[string]any{
-						"format": "uri",
 						"name": "url",
-						"short": "URL to the full article or content",
+						"title": "Url",
 						"type": "`$STRING`",
+						"short": "URL to the full article or content",
+						"format": "uri",
 					},
 				},
 				"id": map[string]any{
@@ -128,7 +133,6 @@ func MakeConfig() map[string]any {
 						"name": "list",
 						"points": []any{
 							map[string]any{
-								"args": map[string]any{},
 								"kind": "http",
 								"method": "GET",
 								"orig": "/hljson",
@@ -137,14 +141,16 @@ func MakeConfig() map[string]any {
 										"lit": "hljson",
 									},
 								},
-								"select": map[string]any{},
+								"parts": []any{
+									"hljson",
+								},
+								"rename": map[string]any{},
 								"transform": map[string]any{
 									"req": "`reqdata`",
 									"res": "`body.highlights`",
 								},
-								"parts": []any{
-									"hljson",
-								},
+								"args": map[string]any{},
+								"select": map[string]any{},
 							},
 						},
 					},

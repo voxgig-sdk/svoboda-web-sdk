@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.HighlightEntity = void 0;
 const SvobodaWebEntityBase_1 = require("../SvobodaWebEntityBase");
-// TODO: needs Entity superclass
 class HighlightEntity extends SvobodaWebEntityBase_1.SvobodaWebEntityBase {
     constructor(client, entopts) {
         super(client, entopts);

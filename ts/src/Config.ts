@@ -16,12 +16,6 @@ const FEATURE_CLASS: Record<string, typeof BaseFeature> = {
 }
 
 
-// Per-feature plugin DEFINITIONS (voxgig/plugin `Definition` values), from
-// the model's active plugin groups. A feature that takes a `plugins` option
-// (secrets over sekreto) reads its own entry; a feature with no plugins has
-// none. Named imports above make each definition statically reachable, so
-// an SDK carries exactly the plugin modules its model selects — the same
-// leanness the old side-effect registry imports bought, without a registry.
 const FEATURE_PLUGINS: Record<string, any[]> = {
   
 }
@@ -32,7 +26,6 @@ class Config {
   makeFeature(this: any, fn: string) {
     const fc = FEATURE_CLASS[fn]
     const fi = new fc()
-    // TODO: errors etc
     return fi
   }
 
@@ -139,30 +132,35 @@ class Config {
       "fields": [
         {
           "name": "content",
-          "short": "Content or description of the highlight",
-          "type": "`$STRING`"
+          "title": "Content",
+          "type": "`$STRING`",
+          "short": "Content or description of the highlight"
         },
         {
           "name": "id",
-          "short": "Unique identifier for the highlight",
-          "type": "`$STRING`"
+          "title": "Id",
+          "type": "`$STRING`",
+          "short": "Unique identifier for the highlight"
         },
         {
-          "format": "date-time",
           "name": "timestamp",
+          "title": "Timestamp",
+          "type": "`$STRING`",
           "short": "Timestamp when the highlight was created or updated",
-          "type": "`$STRING`"
+          "format": "date-time"
         },
         {
           "name": "title",
-          "short": "Title of the highlight",
-          "type": "`$STRING`"
+          "title": "Title",
+          "type": "`$STRING`",
+          "short": "Title of the highlight"
         },
         {
-          "format": "uri",
           "name": "url",
+          "title": "Url",
+          "type": "`$STRING`",
           "short": "URL to the full article or content",
-          "type": "`$STRING`"
+          "format": "uri"
         }
       ],
       "id": {
@@ -176,7 +174,6 @@ class Config {
           "name": "list",
           "points": [
             {
-              "args": {},
               "kind": "http",
               "method": "GET",
               "orig": "/hljson",
@@ -185,14 +182,16 @@ class Config {
                   "lit": "hljson"
                 }
               ],
-              "select": {},
+              "parts": [
+                "hljson"
+              ],
+              "rename": {},
               "transform": {
                 "req": "`reqdata`",
                 "res": "`body.highlights`"
               },
-              "parts": [
-                "hljson"
-              ]
+              "args": {},
+              "select": {}
             }
           ]
         }

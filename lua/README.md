@@ -43,7 +43,7 @@ local highlights, err = client:Highlight():list()
 if err then error(err) end
 
 for _, item in ipairs(highlights) do
-  print(item["id"], item["content"])
+  print(item["id"])
 end
 ```
 

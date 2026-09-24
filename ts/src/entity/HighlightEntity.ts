@@ -19,7 +19,6 @@ import type {
   HighlightListMatch,
 } from '../SvobodaWebTypes'
 
-// TODO: needs Entity superclass
 class HighlightEntity extends SvobodaWebEntityBase<Highlight> {
 
   constructor(client: SvobodaWebSDK, entopts: any) {
